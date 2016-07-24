@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-
+import { RegisterComponent} from './register.component';
 @Component({
-  moduleId: module.id,
+
   selector: 'app-root',
-  templateUrl: 'app.component.html',
-  styleUrls: ['app.component.css']
+  templateUrl: 'app/app.component.html',
+  styleUrls: ['app/app.component.css'],
+  directives:[RegisterComponent]
 })
 export class AppComponent {
   title = 'app works!';
