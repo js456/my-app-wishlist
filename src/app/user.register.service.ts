@@ -2,13 +2,13 @@
  * Created by Jitendra on 7/24/2016.
  */
 
-import {Injectabel} from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Headers,Http} from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 import {UserRegister} from "./register";
 
-@Injectabel
+@Injectable()
 export class UserRegisterService{
 
   private registerUrl='app/register';
@@ -17,9 +17,10 @@ export class UserRegisterService{
 
   // New User register service
   private post(userRegister:UserRegister):Promise<UserRegister>{
-    let headers=new Headers({'Content-Type':'application/json'});
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
 
-    return this.http.post(this.registerUrl. JSON.stringify(UserRegister),{headers:headers})
+    return this.http.post(this.registerUrl,JSON.stringify(userRegister),{headers:headers})
       .toPromise()
       .then(res=>res.json().data)
       .catch(this.handleError);
