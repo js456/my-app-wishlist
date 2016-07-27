@@ -1,7 +1,7 @@
 import { Component, Input, ElementRef, OnInit} from '@angular/core';
 import { RegisterComponent} from './register.component';
 /*//let $=jQuery*/
-declare var $:any
+//declare var $:any
 @Component({
 
   selector: 'app-root',
@@ -18,7 +18,7 @@ export class AppComponent implements OnInit{
     this.rootNode=rootNode;
   }
   ngOnInit(){
-    $(this.rootNode.nativeElement).find('.register').hide();
+   /* $(this.rootNode.nativeElement).find('.register').hide();
     $(this.rootNode.nativeElement).find('.register').click(function () {
       $(this.rootNode.nativeElement).find('.login').hide();
       $(this.rootNode.nativeElement).find('.register').show();
@@ -27,7 +27,7 @@ export class AppComponent implements OnInit{
     $(this.rootNode.nativeElement).find('.login').click(function () {
       $(this.rootNode.nativeElement).find('.login').show();
       $(this.rootNode.nativeElement).find('.register').hide();
-    })
+    })*/
 
 
   }
