@@ -4,24 +4,33 @@
   <div class="inner-bg">
     <div class="container">
       <div class="row">
-        <div class="col-sm-7"></div>
+        <div class="col-sm-7">
+          <div class="wrapper">
+            <css-carousel></css-carousel>
+
+          </div>
+          <span class="carousel-span"><h2 class="text-center"> Demo Content Demo Content</h2>
+          <h3 class="text-center"> Here you can see trending Gifts.  Here you can see trending Gifts.
+           Here you can see trending Gifts.</h3>
+          </span>
+        </div>
         <div class="con-sm-2"></div>
-        <div class="col-sm-5">
+        <div class="col-sm-5" style="margin-top: 5%;">
           <div class="form-box register-container">
             <div class="form-top">
-              <div class="form-top-left">
-                <h3>Sign In</h3>
+              <div class="form-top-left" id="login" (click)="loginToggle()">
+                <h3>Sign In </h3>
 
               </div>
 
-              <div class="form-top-right">
-                <h3>Sign UP</h3>
+              <div class="form-top-right" id="register" (click)="registerToggle()">
+                <h3>Register</h3>
               </div>
             </div>
-            <div class="register">
+            <div  [hidden]="!registerFlag"  >
               <app-register></app-register>
             </div>
-            <div style="visibility: hidden" class="login">
+            <div  [hidden]="!loginFlag" >
               <app-login></app-login>
             </div>
           </div>

@@ -9,35 +9,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require('@angular/core');
-var user_register_service_1 = require('./user.register.service');
-var register_1 = require("./register");
-var RegisterComponent = (function () {
-    function RegisterComponent(registerService) {
+var user_register_service_1 = require('../user.register.service');
+var login_1 = require("./login");
+var LoginComponent = (function () {
+    function LoginComponent(registerService) {
         this.registerService = registerService;
-        this.model = new register_1.UserRegister();
+        this.model = new login_1.UserLogin();
         this.close = new core_1.EventEmitter();
         this.submitted = false;
         // TODO: Remove this when we're done
         /*get diagnostic() {
-          return JSON.stringify(this.model);
-        }*/
+         return JSON.stringify(this.model);
+         }*/
     }
-    RegisterComponent.prototype.onSubmit = function () { this.submitted = true; };
+    LoginComponent.prototype.onSubmit = function () { this.submitted = true; };
     __decorate([
         core_1.Input()
-    ], RegisterComponent.prototype, "userRegister");
+    ], LoginComponent.prototype, "userRegister");
     __decorate([
         core_1.Output()
-    ], RegisterComponent.prototype, "close");
-    RegisterComponent = __decorate([
+    ], LoginComponent.prototype, "close");
+    LoginComponent = __decorate([
         core_1.Component({
-            selector: 'app-register',
-            templateUrl: 'app/register.component.html',
+            selector: 'app-login',
+            templateUrl: '../../app/login-component/login.component.html',
             styleUrls: ['app/css/form.css'],
             providers: [user_register_service_1.UserRegisterService]
         })
-    ], RegisterComponent);
-    return RegisterComponent;
+    ], LoginComponent);
+    return LoginComponent;
 }());
-exports.RegisterComponent = RegisterComponent;
-//# sourceMappingURL=register.component.js.map
+exports.LoginComponent = LoginComponent;
+//# sourceMappingURL=login.component.js.map

@@ -11,12 +11,12 @@ import { NgForm }    from '@angular/forms';
 @Component({
 
   selector: 'app-login',
-  templateUrl: 'app/login.component.html',
+  templateUrl: '../../app/login-component/login.component.html',
   styleUrls: ['app/css/form.css'],
   providers: [UserRegisterService]
 
 })
-export class RegisterComponent{
+export class LoginComponent{
 
   model=new UserLogin()
   //let register=new UserRegister();
